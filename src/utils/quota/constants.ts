@@ -213,3 +213,6 @@ export const XAI_BILLING_URL = 'https://cli-chat-proxy.grok.com/v1/billing';
 export const XAI_REQUEST_HEADERS = {
   Authorization: 'Bearer $TOKEN$',
 };
+
+// Kiro API configuration
+export const KIRO_USAGE_URL = 'https://q.us-east-1.amazonaws.com/getUsageLimits';

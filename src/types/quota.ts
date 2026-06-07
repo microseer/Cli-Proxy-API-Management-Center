@@ -343,3 +343,31 @@ export interface XaiQuotaState {
   error?: string;
   errorStatus?: number;
 }
+
+// Kiro API payload types
+export interface KiroUsagePayload {
+  subscriptionTitle?: string;
+  subscription_title?: string;
+  currentUsage?: number | string;
+  current_usage?: number | string;
+  usageLimit?: number | string;
+  usage_limit?: number | string;
+  nextReset?: number | string;
+  next_reset?: number | string;
+}
+
+export interface KiroQuotaRow {
+  id: string;
+  label: string;
+  used: number;
+  limit: number;
+  resetTime?: string;
+}
+
+export interface KiroQuotaState {
+  status: 'idle' | 'loading' | 'success' | 'error';
+  rows: KiroQuotaRow[];
+  subscriptionTitle?: string | null;
+  error?: string;
+  errorStatus?: number;
+}
